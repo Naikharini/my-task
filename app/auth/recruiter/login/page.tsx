@@ -11,6 +11,11 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
+import { text } from "stream/consumers";
+import LinkedinIcon from "@/public/Linkedin.jpg";
+import GoogleIcon from "@/public/google.png";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import IconButton from "@mui/material/IconButton";
 
 export default function Login() {
   const router = useRouter();
@@ -23,7 +28,7 @@ export default function Login() {
     "Events focus on diversity, women empowerment, and immediate joiners",
     "Engage delivers top-rated candidates through impactful hackathons",
   ];
-
+  
   return (
     
 
@@ -87,13 +92,70 @@ export default function Login() {
           </div>
         </div>
           {/* Right panel*/}
-        
-            </div>
+        <div className="flex flex-1 flex-col justify-center gap-4 p-4"> 
+          <Typography align="center" sx={{ fontSize: 28, fontWeight: 700 }}>
+         Welcome Back!
+          </Typography>
+          <Typography align="center" sx={{ fontSize: 18, fontWeight: 500 }}>
+            For Employer
+          </Typography>
+          <Typography align="center" sx={{ fontSize: 12, fontWeight: 500 }}>
+            Your next great hire is just a login away!  
+          </Typography>
+          <TextField
+            variant="outlined"
+              placeholder="Email ID"
+            fullWidth
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                </InputAdornment>
+              ),
+            }}
+          />
+              <TextField
+             fullWidth
+             variant="outlined"
+             placeholder="Password"
+             type={showPassword ? "text" : "password"}
+             value={password}
+             onChange={(e) => setPassword(e.target.value)}
+             autoComplete="new-password" 
+             InputProps={{
+             endAdornment: (
+             <InputAdornment position="end">
+            <IconButton
+              onClick={() => setShowPassword((prev) => !prev)}
+              edge="end"
+              aria-label="toggle password visibility"
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </IconButton>
+          </InputAdornment>
+        ),
+      }}
+    />
+          <Typography
+            align="center"
+            sx={{ fontSize: 14, fontWeight: 500, color: "blue", cursor: "pointer" }}
+            onClick={() => router.push("/auth/recruiter/forgot-password")}
+          >
+            Forgot Password?
+          </Typography>
+          <button
+            onClick={() => router.push("/auth/recruiter/account")}
+            className="bg-[#0071B6] text-white px-6 py-3 text-base rounded-md hover:opacity-90 w-full"
+          >
+            Sign In
+          </button>
 
-    
-        
-      
-      </main>
-
+          <Typography align="center" sx={{ fontSize: 14, fontWeight: 500 }}>
+            Not On Curatal? <span className="text-blue-600 cursor-pointer ">Sign Up!</span>
+          </Typography>
+        </div>
+      </div>
+      </main> 
   );
 };
