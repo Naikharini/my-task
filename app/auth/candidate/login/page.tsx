@@ -142,12 +142,12 @@ export default function Login() {
           <Typography
             align="center"
             sx={{ fontSize: 14, fontWeight: 500, color: "blue", cursor: "pointer" }}
-            onClick={() => router.push("/auth/recruiter/forgot-password")}
+            onClick={() => router.push("/auth/candidate/forgotpassword")}
           >
             Forgot Password?
           </Typography>
           <button
-            onClick={() => router.push("/auth/recruiter/account")}
+            onClick={() => router.push("candidate/dashboard")}
             className="bg-[#0071B6] text-white px-6 py-3 text-base rounded-md hover:opacity-90 w-full"
           >
             Sign In
