@@ -152,28 +152,21 @@ export default function Login() {
           >
             Sign In
           </button>
-          <Divider sx={{ my: 2 }}>
-          <Typography align="center" sx={{ fontSize: 14, fontWeight: 500 }}>
-            Or Continue with
-          </Typography>
-          </Divider>
-          <Image
-            src={LinkedinIcon}
-            alt= "linkedin"
-              width={32}
-              height={32}
-            className="mx-auto cursor-pointer"
-          /> 
-          <Image
-            src={GoogleIcon}
-            alt="google"
-            width={32}
-            height={32}
-            className="mx-auto cursor-pointer"
-          />
+          <Divider className="my-4">Or Continue with</Divider>
+            <div className="flex justify-center items-center gap-6 mt-6">
+           <div className="bg-white p-1 rounded-xl shadow-md">
+           <Image src="/linkedin.jpg" alt="LinkedIn" width={24} height={24} />
+           </div>
+
+         <div className="bg-white p-1 rounded-xl shadow-md">
+          <Image src="/google.png" alt="Google" width={24} height={24} />
+          </div>
+          </div>
+          <div className="gap-1 mt-4">
           <Typography align="center" sx={{ fontSize: 14, fontWeight: 500 }}>
             Not On Curatal? <span className="text-blue-600 cursor-pointer ">Sign Up!</span>
           </Typography>
+        </div>
         </div>
       </div>
       </main> 
