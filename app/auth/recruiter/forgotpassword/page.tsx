@@ -5,6 +5,8 @@ import Typography from "@mui/material/Typography";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import CuratalLogo from "@/public/curatalLogo.jpg";
+import { redirect } from "next/navigation";
+import { useEffect } from "react";
 export default function ForgotPassword() {
     const router = useRouter();
     
@@ -33,15 +35,15 @@ export default function ForgotPassword() {
                         <Typography align="center" sx={{ fontSize: 12, fontWeight: 500, color: "black", marginBottom: "10px"  }}>
                         Enter Email ID
                         </Typography>
+                        <div className="flex flex-col gap-2">
                         <input type="email" placeholder="name@email.com" className="border border-gray-300 rounded-md px-4 py-2 w-full" />
-                        <Typography align="center" sx={{ fontSize: 12, fontWeight: 500, color: "#f7350f", cursor: "pointer" }}>
-                        Email Is Required
-                        </Typography>
+                        <Typography sx={{ fontSize: 12 }}>Email Is Required</Typography>
+                       </div>
                         <button
-                            onClick={() => router.push("/auth/candidate/login")}
-                            className="bg-[#0071B6] text-white px-6 py-3 text-base rounded-md hover:opacity-90 w-full mt-4"
+                            onClick={() => router.push("/auth/recruiter/success")}
+                            className="bg-[#0071B6] text-white px-6 py-3 p-12 text-base rounded-md hover:opacity-90 w-full mt-4"
                         >
-                            Submit
+                            SUBMIT
                         </button>
                         </div>
                      </div>

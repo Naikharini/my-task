@@ -16,6 +16,8 @@ import LinkedinIcon from "@/public/Linkedin.jpg";
 import GoogleIcon from "@/public/google.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import IconButton from "@mui/material/IconButton";
+import CuratalLogo from "@/public/curatalLogo.jpg";
+import { useEffect } from "react";
 
 export default function Login() {
   const router = useRouter();
@@ -137,22 +139,21 @@ export default function Login() {
         ),
       }}
     />
-          <Typography
-            align="center"
+          <Typography  align="right"
             sx={{ fontSize: 14, fontWeight: 500, color: "blue", cursor: "pointer" }}
-            onClick={() => router.push("/auth/recruiter/forgot-password")}
+            onClick={() => router.push("/auth/recruiter/forgotpassword")}
           >
             Forgot Password?
           </Typography>
           <button
             onClick={() => router.push("recruiter/dashboard")}
-            className="bg-[#0071B6] text-white px-6 py-3 text-base rounded-md hover:opacity-90 w-full"
+            className="bg-[#0071B6] text-white px-6 py-3 10  p-text-base rounded-md hover:opacity-100 w-full"
           >
             Sign In
           </button>
 
           <Typography align="center" sx={{ fontSize: 14, fontWeight: 500 }}>
-            Not On Curatal? <span className="text-blue-600 cursor-pointer ">Sign Up!</span>
+            Not On Curatal? <span className="text-blue-600 cursor-pointer" onClick={() => router.push("/auth/recruiter/signup")}> Sign Up!</span>
           </Typography>
         </div>
       </div>
