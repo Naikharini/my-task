@@ -164,7 +164,7 @@ export default function Signup() {
           </div>
           <div className="gap-1 mt-4">
           <Typography align="center" sx={{ fontSize: 14, fontWeight: 500 }}>
-            If You Have An Existing Account, <span className="text-blue-600 cursor-pointer ">Sign In</span>
+            If You Have An Existing Account, <span className="text-blue-600 cursor-pointer " onClick={() => router.push("/auth/candidate/login")}>Sign In</span>
           </Typography>
           </div>
           </div>

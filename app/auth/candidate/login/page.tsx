@@ -164,7 +164,7 @@ export default function Login() {
           </div>
           <div className="gap-1 mt-4">
           <Typography align="center" sx={{ fontSize: 14, fontWeight: 500 }}>
-            Not On Curatal? <span className="text-blue-600 cursor-pointer ">Sign Up!</span>
+            Not On Curatal? <span className="text-blue-600 cursor-pointer " onClick={() => router.push("/auth/candidate/signup")}>Sign Up!</span>
           </Typography>
         </div>
         </div>
