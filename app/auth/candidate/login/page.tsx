@@ -63,7 +63,7 @@ export default function Login() {
             >
               CHAL Curatal and take the leap towards your dream career!
             </Typography>
-
+          
             <div className="mt-6 space-y-3">
               {features.map((item, index) => (
                 <div
@@ -84,7 +84,7 @@ export default function Login() {
               ))}
             </div>
             <Typography
-              className="slide-up mt-6 text-center gap-4"
+              className="slide-up mt-8 text-center gap-4 p-2"
               style={{ animationDelay: "3s" }}
               sx={{ fontSize: 18, fontWeight: 500 }}
             >
@@ -140,7 +140,7 @@ export default function Login() {
       }}
     />
           <Typography
-            align="center"
+            align="right"
             sx={{ fontSize: 14, fontWeight: 500, color: "blue", cursor: "pointer" }}
             onClick={() => router.push("/auth/candidate/forgotpassword")}
           >
