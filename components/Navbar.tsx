@@ -1,77 +1,38 @@
 "use client";
-
-
-
 import React from "react";
-
 import Image from "next/image";
-
 import { useRouter, usePathname } from "next/navigation";
-
 import { Typography } from "@mui/material";
-
-
-
-
-
 import curatalLogo from "../public/curatalLogo.jpg";
-
 import chalcuratal from "../public/chalcuratal.jpg";
-
-
-
 const BaseNavbarMenu = [
-
   { id: 1, title: "Find Talent", path: "/" },
-
-
-
   {
-
     id: 2,
-
     title: "Solutions",
-
     dropdown: "mega",
-
     sections: [
-
       {
-
         heading: "Database",
-
         items: [
-
           " Pre-Interviewed Candidates",
 
           "AI-Interviewed Candidates",
 
           "Un-Interviewed Candidates",
-
         ],
-
       },
 
       {
-
         heading: "Assessment",
-
         items: ["Video Interviews", "Coding Assessment", "AI Assessment"],
-
       },
-
       {
-
         heading: "Events",
-
         items: [
-
           "Diversity Hiring",
-
           "Recruiting Events",
-
           "Early Joiner Events",
-
           "Women in Digital",
 
         ],
